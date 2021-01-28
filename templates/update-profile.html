@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<body style="background-image: url({{url_for('static', filename='images/profile-bg.jpg')}}); background-repeat: no-repeat;
+                background-size: 147%">
+    {% block bootstrap %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="topnav" id="myTopnav">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/service-request">Service Request</a>
+            <a href="/profile" class="active">Profile</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    {% endblock %}
+    <h1 style="text-align: center; font-family: cursive; color: blue;">Update profile</h1>
+    <br /><br />
+    <div class="update" style="width: 400px; height: 243px; border: 5px solid black; margin: auto; text-align: center;">
+        <form action="#" method="post">
+            <h4 style="display: inline-block;">User-name:</h4>
+            <input placeholder=" Username" align="center" name="username" style="border-radius: 10px; display: inline-block;" />
+            <br />
+            <h4 style="display: inline-block;">Account:</h4>
+            <input placeholder=" Account" align="center" name="acc" style="border-radius: 10px; display: inline-block;" />
+            <br />
+            <h4 style="display: inline-block;">Phone number:</h4>
+            <input placeholder=" Phone number" align="center" name="num" style="border-radius: 10px; display: inline-block;" />
+            <br /><br />
+            <input type="submit" style="font-family: cursive; border-radius: 10px; background-color: blue;" name="update button" value="Update profile"/>
+        </form>
+    </div>
+    <br /><br /><br /><br />
+    {% block links %}
+        <p style="text-align: center;"><a href="/profile/update/password">Change password</a></p>
+        <p style="text-align: center;">Leave blank to let the values be the same</p>
+    {% endblock %}
+</body>
+{% endblock %}

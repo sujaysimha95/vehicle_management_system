@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<body style="background-image: url({{url_for('static', filename='images/profile-bg.jpg')}}); background-repeat: no-repeat;
+                background-size: 147%">
+    {% block navbar %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="topnav" id="myTopnav">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/service-request">Service Request</a>
+            <a href="/profile" class="active">Profile</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    {% endblock %}
+    <h1 style="text-align: center; color: blue; font-family: cursive">Profile</h1>
+    <div style="text-align: center; width: 400px; height: 150px; border: 5px solid black; margin: auto; align: center;">
+        <h4>Username: {{name}}</h4>
+        <h4>Account: {{acc}}</h4>
+        <h4>Phone number: {{num}}</h4>
+    </div>
+    {% block links %}
+        <p style="text-align: center;"><a href="/profile/update" style="color: blue;">Update profile</a></p>
+        <p style="text-align: center;"><a href="logout" style="color: blue;">Logout</a></p>
+    {% endblock %}
+</body>
+{% endblock %}

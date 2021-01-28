@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<body style="background-image: url({{url_for('static', filename='images/service-request-bg.jpg')}}); background-repeat: no-repeat;
+                background-size: 50%; background-position: 50% 1%">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav" id="myTopnav">
+        <a href="/admin/dashboard">Dashboard</a>
+        <a href="/admin/service-request" class="active">Service Request</a>
+        <a href="/admin/print-bill">Print bill</a>
+        <a href="/admin/profile">Profile</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <h1 style="text-align: center; color: blue; font-family: cursive">Service request</h1>
+    <br /><br />
+    <table border="1px" style="border-collapse: collapse; align: center; opacity: 85%">
+        <tr>
+            <th>Service ID</th>
+            <th>Submitted user</th>
+            <th>Category</th>
+            <th>Vehicle name</th>
+            <th>Vehicle model</th>
+            <th>Vehicle brand</th>
+            <th>Vehicle registration number</th>
+            <th>Service date</th>
+            <th>Service time</th>
+            <th>Service type</th>
+            <th>Delivery date</th>
+            <th>Delivery time</th>
+            <th>Delivery address</th>
+            <th>Bill</th>
+            <th>Status</th>
+        </tr>
+        {% for i in service_requests %}
+            <tr>
+                {% for j in i %}
+                    <th>{{j}}</th>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <p style="text-align: center;"><a href="/admin/delivery-date-time">Set a delivery date and time</a></p>
+    <p style="text-align: center;"><a href="/admin/approve">Approve a service request</a></p>
+    <p style="text-align: center;"><a href="/admin/decline">Decline a service request</a></p>
+</body>
+{% endblock %}

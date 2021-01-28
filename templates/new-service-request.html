@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<body style="background-image: url({{url_for('static', filename='images/service-request-bg.jpg')}}); background-repeat: no-repeat;
+                background-size: 50%; background-position: 50% 1%">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav" id="myTopnav">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/service-request" class="active">Service Request</a>
+        <a href="/profile">Profile</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <h1 style="text-align: center; color: blue; font-family: cursive">Service request form</h1>
+    <br /><br /><br /><br />
+    <div class="input" style="text-align: center; color: red; font-weight: bold;">
+        <form action="#" method="post">
+            Vehicle category: <input placeholder=" Vehicle category" align="center" name="vehicle_category" style="border-radius: 10px;" />
+            <br /><br />
+            Vehicle name: <input placeholder=" Vehicle name" name="vehicle_name" style="border-radius: 10px;"/>
+            <br /><br />
+            Vehicle model: <input placeholder=" Vehicle model" name="vehicle_model" style="border-radius: 10px;" />
+            <br /><br />
+            Vehicle brand: <input placeholder=" Vehicle brand" name="vehicle_brand" style="border-radius: 10px;" />
+            <br /><br />
+            Vehicle registration number: <input placeholder=" Vehicle registration number" name="vehicle_registration_number" style="border-radius: 10px;" />
+            <br /><br />
+            Service date: <input placeholder=" Service date" type="date" name="service_date" style="border-radius: 10px;" />
+            <br /><br />
+            Service time: <input placeholder=" Service time" type="time" min="09:00" max="22:00" name="service_time" style="border-radius: 10px;" />
+            <br /><br />
+            Service type: <select name="service">
+                            <option value="general service">General service</option>
+                            <option value="special service">Special service</option>
+                          </select>
+            <br /><br />
+            Delivery address: <input placeholder=" Delivery address" name="delivery_address" style="border-radius: 10px;" />
+            <br /><br />
+            <button style="background-color: blue;align: center;border-radius: 10px;">Submit</button>
+        </form>
+    </div>
+</body>
+{% endblock %}

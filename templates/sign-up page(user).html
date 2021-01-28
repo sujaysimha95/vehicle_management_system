@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle service management</title>
+    <style>
+        .inputs {
+            border-radius: 10px;
+            align: center;
+            opacity: 85%
+        }
+        body {
+            background-image: url({{url_for('static', filename='images/sign-up img.jpg')}});
+            background-repeat: no-repeat;
+            background-position: 50% 90%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: blue; font-family: cursive">Welcome to vehicle service management!</h1>
+    <br /><br /><br /><br /><br />
+    <div style="text-align: center;">
+        <form action="#" method="post">
+            <input placeholder=" username" class="inputs" name="username"/>
+            <br /><br />
+            <input placeholder=" account" class="inputs" name="account"/>
+            <br /><br />
+            <input placeholder=" password" class="inputs" type="password" name="password"/>
+            <br /><br />
+            <input placeholder=" phone number" class="inputs" name="number"/>
+            <br /><br />
+            <input type="submit" style="font-family: cursive; border-radius: 10px; background-color: blue;" name="sign-up button" value="Sign up"/>
+            <br /><br /><br /><br /><br /><br /><br /><br />
+            <p>Are you the admin? <a href="/login/admin" style="color: blue;">Login as admin</a></p>
+            <p>Not a new user? <a href="/login/user" style="color: blue;">Login as user</a></p>
+        </form>
+    </div>
+</body>
+</html>

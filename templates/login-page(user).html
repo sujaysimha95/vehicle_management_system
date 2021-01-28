@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle service management</title>
+    <style>
+        .inputs {
+            border-radius: 10px;
+            align: center;
+        }
+        body {
+            background-image: url({{url_for('static', filename='images/sign-up img.jpg')}});
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+        }
+        form {
+            opacity: 85%
+        }
+        button {
+            opacity: 100%
+        }
+    </style>
+</head>
+{% block body %}
+<body>
+    <h1 style="text-align: center; color: blue; font-family: cursive">Welcome back to vehicle service management!</h1>
+    <br /><br /><br /><br /><br />
+    <div style="text-align: center;">
+        <form action="#" method="post">
+            <input placeholder=" username" class="inputs" name="username" />
+            <br /><br />
+            <input placeholder=" account" class="inputs" name="acc" style="opacity: 85%" />
+            <br /><br />
+            <input placeholder=" password" class="inputs" type="password" name="passw" />
+            <br /><br />
+            <!-- <input placeholder=" phone number" class="inputs" name="number" />
+            <br /><br /> -->
+            <input type="submit" class="button" style="font-family: cursive; border-radius: 10px; background-color: blue;"
+                   name="sign-up button" value="Log in" />
+            <br /><br /><br /><br /><br /><br /><br /><br />
+            <p>Are you the admin? <a href="/login/admin" style="color: blue;">Login as admin</a></p>
+            <p>New user? <a href="/sign-up/user" name="sign-up" style="color: blue;">Sign-up</a></p>
+        </form>
+    </div>
+</body>
+{% endblock %}
+</html>
