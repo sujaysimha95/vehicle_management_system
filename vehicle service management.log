@@ -1,0 +1,6 @@
+timestamp(utc): 2021.01.22 13:19:36; timestamp(sys time): 2021.01.22 18:49:362021.01.22 18:49:38 INFO:: :timestamp(utc): 2021.01.22 13:19:38:timestamp(sys_time):2021.01.22 18:49:38; Connecting to database...
+2021.01.22 18:49:39 INFO:: :timestamp(utc): 2021.01.22 13:19:39:timestamp(sys_time):2021.01.22 18:49:39; Connected to database!
+2021.01.22 18:49:39 INFO:: :timestamp(utc): 2021.01.22 13:19:39:timestamp(sys_time):2021.01.22 18:49:39; Fetching data from table `vehicle_management_system`.`users`...
+2021.01.22 18:49:39 INFO:: :timestamp(utc): 2021.01.22 13:19:39:timestamp(sys_time):2021.01.22 18:49:39; Done!
+2021.01.22 18:49:39 INFO:: App successfully started!
+2021.01.22 18:49:41 INFO:: :timestamp(utc): 2021.01.22 13:19:41:timestamp(sys_time):2021.01.22 18:49:41; App successfully shut down!
